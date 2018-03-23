@@ -36,6 +36,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,6 +58,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ControlSchedule.xaml.cs">
+      <DependentUpon>ControlSchedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Base\BaseVM.cs" />
+    <Compile Include="ViewModel\Base\DelegateCommand.cs" />
+    <Compile Include="ViewModel\MainWindowVM.cs" />
+    <Compile Include="ViewModel\SchedulePageVM.cs" />
+    <Compile Include="View\SchedulePage.xaml.cs">
+      <DependentUpon>SchedulePage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ControlSchedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,6 +84,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\SchedulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -92,6 +114,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Add.png" />
+    <Resource Include="Assets\AddClients.png" />
+    <Resource Include="Assets\Clients.png" />
+    <Resource Include="Assets\Edit.png" />
+    <Resource Include="Assets\EditClients.png" />
+    <Resource Include="Assets\NoPhoto.jpg" />
+    <Resource Include="Assets\rapidsvn.png" />
+    <Resource Include="Assets\Raspisanie.png" />
+    <Resource Include="Assets\Remove.png" />
+    <Resource Include="Assets\RemoveClients.png" />
+    <Resource Include="Assets\Save.png" />
+    <Resource Include="Assets\Save2.png" />
+    <Resource Include="Assets\Search.png" />
+    <Resource Include="Assets\Servis.png" />
+    <Resource Include="Assets\Sotrydniki.png" />
+    <Resource Include="Assets\Tovaru.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

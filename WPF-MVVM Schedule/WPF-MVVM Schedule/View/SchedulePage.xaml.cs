@@ -14,20 +14,22 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_MVVM_Schedule.ViewModel;
 
-namespace WPF_MVVM_Schedule
+namespace WPF_MVVM_Schedule.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SchedulePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SchedulePage : Page
     {
-        private MainWindowVM mainWindowVM;
-        public MainWindow()
+        public static SchedulePage Instance;
+        private SchedulePageVM schedulePageVM;
+        public SchedulePage()
         {
             InitializeComponent();
-            mainWindowVM = new MainWindowVM(this);
-            DataContext = mainWindowVM;
 
+            schedulePageVM = new SchedulePageVM(this);
+            DataContext = schedulePageVM;
+            Instance = this;
         }
     }
 }

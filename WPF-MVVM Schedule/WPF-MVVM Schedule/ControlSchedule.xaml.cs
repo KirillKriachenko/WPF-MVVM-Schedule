@@ -12,22 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF_MVVM_Schedule.ViewModel;
 
 namespace WPF_MVVM_Schedule
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ControlSchedule.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ControlSchedule : UserControl
     {
-        private MainWindowVM mainWindowVM;
-        public MainWindow()
+        //public SheduleControlVM SheduleControl;
+        //private Add_ScheduleVM add_ScheduleVM;
+
+        public ControlSchedule(int columnNumber)
         {
             InitializeComponent();
-            mainWindowVM = new MainWindowVM(this);
-            DataContext = mainWindowVM;
-
         }
     }
 }
